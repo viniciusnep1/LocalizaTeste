@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, ListGroupItem, ListGroup, Button, Form, FormGroup, Input, Label } from 'reactstrap';
+import { Container, Col, Button, Form, FormGroup, Input, Label } from 'reactstrap';
 
 export class Home extends Component {
     static displayName = Home.name;
@@ -24,7 +24,6 @@ export class Home extends Component {
 
         const response = await fetch('divisors', requestOptions);
         const data = await response.json();
-        console.log(data.result);
         this.setState({ data: data.result });
     }
 

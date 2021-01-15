@@ -9,22 +9,22 @@ namespace Services.utils
     {
         public static List<int> GetDivisors(this int number)
         {
-            var listDivisors = new List<int>();
+            var divisors = new List<int>();
             for (int i = 1; i <= number; i++)
             {
                 var rest = number % i;
                 if (rest == 0)
                 {
-                    listDivisors.Add(i);
+                    divisors.Add(i);
                 }
             }
 
-            return listDivisors.OrderBy(x => x).ToList();
+            return divisors.OrderBy(x => x).ToList();
         }
 
         public static List<int> GetPrimeNumers(this List<int> numbers)
         {
-            var listPrime = new List<int>();
+            var primes = new List<int>();
             numbers.ForEach(num =>
             {
                 bool isPrime = true;
@@ -38,11 +38,11 @@ namespace Services.utils
                 }
                 if (isPrime)
                 {
-                    listPrime.Add(num);
+                    primes.Add(num);
                 }
             });
 
-            return listPrime.OrderBy(x => x).ToList();
+            return primes.OrderBy(x => x).ToList();
         }
     }
 }
